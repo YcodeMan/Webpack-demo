@@ -1,7 +1,12 @@
-var config = require('./config.json');
+import React, {Component} form 'react';
+import config form ',/config.json';
 
-module.exports = function () {
-	var greet = document.createElement('div');
-	greet.textContent = config.greetText;
-	return greet;
+class Greeter extends Component{
+	render() {
+		return (
+			<div>
+			  {config.greetTest}
+			</div>
+		);
+	}
 }
