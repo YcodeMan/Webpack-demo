@@ -12,7 +12,8 @@ module.exports = {
 	devServer: {
 		contentBase: "./build",
 		historyApiFallback: true,
-		inline: true
+		inline: true,
+		hot: true
 	},
 	module: {
 		rules: [
@@ -44,6 +45,7 @@ module.exports = {
 		new webpack.BannerPlugin('版本所有'),
 		new HtmlWebpackPlugin({
 			template: __dirname + "/app/index.tmpl.html"
-		})
+		}),
+		new webpack.HotModuleReplacementPlugin()
 	],
 }
